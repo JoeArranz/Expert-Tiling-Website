@@ -32,13 +32,14 @@ if (navToggle && nav) {
 
 if (header) {
   const updateHeader = () => {
-    const scrolled = window.scrollY > 50;
+    const atTop = window.scrollY <= 10;
 
-    header.classList.toggle("is-compact", scrolled);
-    header.classList.toggle("has-shadow", scrolled);
+    header.classList.toggle("is-hidden", !atTop);
+    header.classList.toggle("is-compact", !atTop);
+    header.classList.toggle("has-shadow", !atTop);
   };
 
-  window.addEventListener("scroll", updateHeader);
+  window.addEventListener("scroll", updateHeader, { passive: true });
   updateHeader();
 }
 
