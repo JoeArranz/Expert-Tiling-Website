@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" role="img" aria-labelledby="title desc">
+  <title id="title">Mosaic placeholder</title>
+  <desc id="desc">A temporary mosaic tile image with varied coloured pieces.</desc>
+  <rect width="1000" height="750" fill="#253134"/>
+  <g transform="translate(70 60)">
+    <rect width="860" height="630" rx="8" fill="#efe6d8"/>
+    <g stroke="#fffdf8" stroke-width="5">
+      <rect x="32" y="30" width="96" height="96" fill="#b75f3a"/>
+      <rect x="132" y="30" width="96" height="96" fill="#d2b38d"/>
+      <rect x="232" y="30" width="96" height="96" fill="#527361"/>
+      <rect x="332" y="30" width="96" height="96" fill="#315f7c"/>
+      <rect x="432" y="30" width="96" height="96" fill="#dccfbe"/>
+      <rect x="532" y="30" width="96" height="96" fill="#8c7564"/>
+      <rect x="632" y="30" width="96" height="96" fill="#c69b66"/>
+      <rect x="732" y="30" width="96" height="96" fill="#263033"/>
+      <rect x="32" y="130" width="96" height="96" fill="#315f7c"/>
+      <rect x="132" y="130" width="96" height="96" fill="#263033"/>
+      <rect x="232" y="130" width="96" height="96" fill="#c69b66"/>
+      <rect x="332" y="130" width="96" height="96" fill="#b75f3a"/>
+      <rect x="432" y="130" width="96" height="96" fill="#527361"/>
+      <rect x="532" y="130" width="96" height="96" fill="#dccfbe"/>
+      <rect x="632" y="130" width="96" height="96" fill="#8c7564"/>
+      <rect x="732" y="130" width="96" height="96" fill="#d2b38d"/>
+      <rect x="32" y="230" width="96" height="96" fill="#527361"/>
+      <rect x="132" y="230" width="96" height="96" fill="#dccfbe"/>
+      <rect x="232" y="230" width="96" height="96" fill="#8c7564"/>
+      <rect x="332" y="230" width="96" height="96" fill="#d2b38d"/>
+      <rect x="432" y="230" width="96" height="96" fill="#315f7c"/>
+      <rect x="532" y="230" width="96" height="96" fill="#c69b66"/>
+      <rect x="632" y="230" width="96" height="96" fill="#263033"/>
+      <rect x="732" y="230" width="96" height="96" fill="#b75f3a"/>
+      <rect x="32" y="330" width="96" height="96" fill="#d2b38d"/>
+      <rect x="132" y="330" width="96" height="96" fill="#527361"/>
+      <rect x="232" y="330" width="96" height="96" fill="#315f7c"/>
+      <rect x="332" y="330" width="96" height="96" fill="#8c7564"/>
+      <rect x="432" y="330" width="96" height="96" fill="#b75f3a"/>
+      <rect x="532" y="330" width="96" height="96" fill="#263033"/>
+      <rect x="632" y="330" width="96" height="96" fill="#dccfbe"/>
+      <rect x="732" y="330" width="96" height="96" fill="#c69b66"/>
+      <rect x="32" y="430" width="96" height="96" fill="#c69b66"/>
+      <rect x="132" y="430" width="96" height="96" fill="#b75f3a"/>
+      <rect x="232" y="430" width="96" height="96" fill="#d2b38d"/>
+      <rect x="332" y="430" width="96" height="96" fill="#263033"/>
+      <rect x="432" y="430" width="96" height="96" fill="#8c7564"/>
+      <rect x="532" y="430" width="96" height="96" fill="#315f7c"/>
+      <rect x="632" y="430" width="96" height="96" fill="#527361"/>
+      <rect x="732" y="430" width="96" height="96" fill="#dccfbe"/>
+    </g>
+  </g>
+</svg>

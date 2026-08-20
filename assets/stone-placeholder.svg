@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" role="img" aria-labelledby="title desc">
+  <title id="title">Stone and terrazzo placeholder</title>
+  <desc id="desc">A temporary stone and terrazzo detail image.</desc>
+  <rect width="1000" height="750" fill="#efe6d8"/>
+  <path d="M0 0H1000V284H0Z" fill="#293537"/>
+  <path d="M0 284H1000V750H0Z" fill="#d6c2a6"/>
+  <g opacity="0.58">
+    <path d="M55 334H274V511H55Z" fill="#8d705e"/>
+    <path d="M300 334H520V511H300Z" fill="#ece1cf"/>
+    <path d="M546 334H765V511H546Z" fill="#9fa99e"/>
+    <path d="M791 334H945V511H791Z" fill="#b75f3a"/>
+    <path d="M55 536H274V702H55Z" fill="#efe6d8"/>
+    <path d="M300 536H520V702H300Z" fill="#7b8581"/>
+    <path d="M546 536H765V702H546Z" fill="#c49b68"/>
+    <path d="M791 536H945V702H791Z" fill="#ead8be"/>
+  </g>
+  <g fill="#ffffff" opacity="0.5">
+    <circle cx="143" cy="407" r="10"/>
+    <circle cx="381" cy="438" r="7"/>
+    <circle cx="651" cy="386" r="11"/>
+    <circle cx="859" cy="440" r="8"/>
+    <circle cx="191" cy="622" r="8"/>
+    <circle cx="430" cy="618" r="11"/>
+    <circle cx="664" cy="632" r="7"/>
+    <circle cx="888" cy="615" r="9"/>
+  </g>
+  <path d="M90 178H910" stroke="#f1b590" stroke-width="18" stroke-linecap="round"/>
+  <path d="M90 222H710" stroke="#fffdf8" stroke-opacity="0.72" stroke-width="10" stroke-linecap="round"/>
+</svg>

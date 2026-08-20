@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" role="img" aria-labelledby="title desc">
+  <title id="title">Bathroom tiling placeholder</title>
+  <desc id="desc">A temporary bathroom image showing wall tile and a vanity.</desc>
+  <defs>
+    <pattern id="small-tile" width="68" height="68" patternUnits="userSpaceOnUse">
+      <rect width="68" height="68" fill="#e8ddcc"/>
+      <path d="M68 0H0V68" fill="none" stroke="#ffffff" stroke-width="3" stroke-opacity="0.65"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="750" fill="#263033"/>
+  <rect width="1000" height="500" fill="url(#small-tile)"/>
+  <path d="M0 500H1000V750H0Z" fill="#897d70"/>
+  <path d="M0 500H1000" stroke="#ffffff" stroke-width="4" stroke-opacity="0.45"/>
+  <rect x="570" y="120" width="265" height="300" rx="8" fill="#f9f5ed"/>
+  <rect x="596" y="148" width="213" height="244" fill="#9eb1ae"/>
+  <rect x="170" y="386" width="340" height="54" rx="7" fill="#233033"/>
+  <rect x="205" y="318" width="270" height="72" rx="18" fill="#fbf8f2"/>
+  <path d="M191 440H489V543C489 590 451 628 404 628H276C229 628 191 590 191 543Z" fill="#d7c7b1"/>
+</svg>
