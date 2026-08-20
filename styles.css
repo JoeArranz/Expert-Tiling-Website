@@ -24,6 +24,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: clip;
   color: var(--ink);
   background: var(--paper-strong);
   font-family: Arial, Helvetica, sans-serif;
@@ -409,6 +410,67 @@ h3 {
 
 .section-narrow {
   padding-bottom: 90px;
+}
+
+/* Staggered tile rows soften each change in section colour. */
+.intro,
+.service-pathways,
+.gallery,
+.process-band,
+.testimonial,
+.contact-section,
+.terms-section {
+  position: relative;
+}
+
+.intro::before,
+.service-pathways::before,
+.gallery::before,
+.process-band::before,
+.testimonial::before,
+.contact-section::before,
+.terms-section::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 70px;
+  pointer-events: none;
+  content: "";
+  transform: translateX(-50%);
+  background:
+    linear-gradient(90deg, rgba(var(--tile-transition-from), 0.96) 0 42px, transparent 42px) 0 0 / 46px 16px repeat-x,
+    linear-gradient(90deg, rgba(var(--tile-transition-from), 0.78) 0 42px, transparent 42px) 23px 18px / 46px 16px repeat-x,
+    linear-gradient(90deg, rgba(var(--tile-transition-from), 0.5) 0 42px, transparent 42px) 0 36px / 46px 16px repeat-x,
+    linear-gradient(90deg, rgba(var(--tile-transition-from), 0.2) 0 42px, transparent 42px) 23px 54px / 46px 16px repeat-x;
+}
+
+.intro {
+  --tile-transition-from: 16, 28, 26;
+}
+
+.service-pathways {
+  --tile-transition-from: 255, 255, 255;
+}
+
+.gallery {
+  --tile-transition-from: 247, 242, 234;
+}
+
+.process-band {
+  --tile-transition-from: 255, 255, 255;
+}
+
+.testimonial {
+  --tile-transition-from: 16, 28, 26;
+}
+
+.contact-section {
+  --tile-transition-from: 255, 255, 255;
+}
+
+.terms-section {
+  --tile-transition-from: 247, 242, 234;
 }
 
 .intro {
