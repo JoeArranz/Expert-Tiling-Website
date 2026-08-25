@@ -1,8 +1,14 @@
 :root {
   --ink: #101c1a;
+  --ink-rgb: 16, 28, 26;
   --ink-soft: #4a5552;
   --paper: #f7f2ea;
+  --paper-rgb: 247, 242, 234;
   --paper-strong: #fffdf8;
+  --paper-strong-rgb: 255, 253, 248;
+  --terms-rgb: 20, 31, 29;
+  --tile-band-height: 106px;
+  --tile-content-gap: 32px;
   --line: #dfd5c8;
   --tile-purple: #8a266e;
   --expert-pink: #e3357c;
@@ -412,8 +418,7 @@ h3 {
   padding-bottom: 90px;
 }
 
-/* Staggered tile rows soften each change in section colour. */
-.intro,
+/* Six staggered tile rows soften only the high-contrast section changes. */
 .service-pathways,
 .gallery,
 .process-band,
@@ -421,9 +426,19 @@ h3 {
 .contact-section,
 .terms-section {
   position: relative;
+  isolation: isolate;
 }
 
-.intro::before,
+.service-pathways > *,
+.gallery > *,
+.process-band > *,
+.testimonial > *,
+.contact-section > *,
+.terms-section > * {
+  position: relative;
+  z-index: 1;
+}
+
 .service-pathways::before,
 .gallery::before,
 .process-band::before,
@@ -434,43 +449,74 @@ h3 {
   top: 0;
   left: 50%;
   width: 100vw;
-  height: 70px;
+  z-index: 0;
+  height: var(--tile-band-height);
   pointer-events: none;
   content: "";
   transform: translateX(-50%);
   background:
-    linear-gradient(90deg, rgba(var(--tile-transition-from), 0.96) 0 42px, transparent 42px) 0 0 / 46px 16px repeat-x,
-    linear-gradient(90deg, rgba(var(--tile-transition-from), 0.78) 0 42px, transparent 42px) 23px 18px / 46px 16px repeat-x,
-    linear-gradient(90deg, rgba(var(--tile-transition-from), 0.5) 0 42px, transparent 42px) 0 36px / 46px 16px repeat-x,
-    linear-gradient(90deg, rgba(var(--tile-transition-from), 0.2) 0 42px, transparent 42px) 23px 54px / 46px 16px repeat-x;
+    linear-gradient(90deg, rgba(var(--tile-transition-from), 1) 0 42px, transparent 42px) 0 0 / 46px 16px repeat-x,
+    linear-gradient(90deg, rgba(var(--tile-transition-from), var(--tile-opacity-2, 0.78)) 0 42px, transparent 42px) 23px 18px / 46px 16px repeat-x,
+    linear-gradient(90deg, rgba(var(--tile-transition-from), var(--tile-opacity-3, 0.5)) 0 42px, transparent 42px) 0 36px / 46px 16px repeat-x,
+    linear-gradient(90deg, rgba(var(--tile-transition-from), var(--tile-opacity-4, 0.26)) 0 42px, transparent 42px) 23px 54px / 46px 16px repeat-x,
+    linear-gradient(90deg, rgba(var(--tile-transition-from), var(--tile-opacity-5, 0.12)) 0 42px, transparent 42px) 0 72px / 46px 16px repeat-x,
+    linear-gradient(90deg, rgba(var(--tile-transition-from), var(--tile-opacity-6, 0.05)) 0 42px, transparent 42px) 23px 90px / 46px 16px repeat-x,
+    linear-gradient(180deg,
+      rgb(var(--tile-transition-from)) 0,
+      rgb(var(--tile-transition-from)) 8%,
+      rgb(var(--tile-transition-to)) 100%);
 }
 
-.intro {
-  --tile-transition-from: 16, 28, 26;
+.service-pathways > .section-heading,
+.process-band > .section,
+.gallery,
+.testimonial {
+  padding-top: calc(var(--tile-band-height) + var(--tile-content-gap));
 }
 
 .service-pathways {
-  --tile-transition-from: 255, 255, 255;
+  --tile-transition-from: var(--paper-strong-rgb);
+  --tile-transition-to: var(--paper-rgb);
+  --tile-opacity-2: 0.94;
+  --tile-opacity-3: 0.78;
+  --tile-opacity-4: 0.56;
+  --tile-opacity-5: 0.34;
+  --tile-opacity-6: 0.18;
 }
 
 .gallery {
-  --tile-transition-from: 247, 242, 234;
+  --tile-transition-from: var(--paper-rgb);
+  --tile-transition-to: var(--paper-strong-rgb);
+  --tile-opacity-2: 0.94;
+  --tile-opacity-3: 0.78;
+  --tile-opacity-4: 0.56;
+  --tile-opacity-5: 0.34;
+  --tile-opacity-6: 0.18;
 }
 
 .process-band {
-  --tile-transition-from: 255, 255, 255;
+  --tile-transition-from: var(--paper-strong-rgb);
+  --tile-transition-to: var(--ink-rgb);
 }
 
 .testimonial {
-  --tile-transition-from: 16, 28, 26;
+  --tile-transition-from: var(--ink-rgb);
+  --tile-transition-to: var(--paper-strong-rgb);
 }
 
 .contact-section {
-  --tile-transition-from: 255, 255, 255;
+  --tile-transition-from: var(--paper-strong-rgb);
+  --tile-transition-to: var(--paper-rgb);
+  --tile-opacity-2: 0.94;
+  --tile-opacity-3: 0.78;
+  --tile-opacity-4: 0.56;
+  --tile-opacity-5: 0.34;
+  --tile-opacity-6: 0.18;
 }
 
 .terms-section {
-  --tile-transition-from: 247, 242, 234;
+  --tile-transition-from: var(--paper-rgb);
+  --tile-transition-to: var(--terms-rgb);
 }
 
 .intro {
@@ -479,37 +525,6 @@ h3 {
   gap: 52px;
   align-items: start;
   background: #fff;
-  box-shadow: 0 0 0 100vmax #fff;
-  clip-path: inset(0 -100vmax);
-}
-
-.service-pathways {
-  background: var(--paper);
-  box-shadow: 0 0 0 100vmax var(--paper);
-  clip-path: inset(0 -100vmax);
-}
-
-.gallery {
-  background: #fff;
-  box-shadow: 0 0 0 100vmax #fff;
-  clip-path: inset(0 -100vmax);
-}
-
-.process-band {
-  background: var(--ink);
-  color: #fff;
-  box-shadow: 0 0 0 100vmax var(--ink);
-  clip-path: inset(0 -100vmax);
-}
-
-.testimonial {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 56px;
-  align-items: start;
-  background: #fff;
-  box-shadow: 0 0 0 100vmax #fff;
-  clip-path: inset(0 -100vmax);
 }
 
 .intro-label {
@@ -631,8 +646,6 @@ h3 {
 
 .gallery {
   background: #fff;
-  box-shadow: 0 0 0 100vmax #fff;
-  clip-path: inset(0 -100vmax);
 }
 
 .gallery-heading {
@@ -1173,8 +1186,6 @@ body.lightbox-open {
   gap: 56px;
   align-items: start;
   background: #fff;
-  box-shadow: 0 0 0 100vmax #fff;
-  clip-path: inset(0 -100vmax);
 }
 
 .testimonial blockquote {
@@ -1202,7 +1213,7 @@ body.lightbox-open {
   display: grid;
   grid-template-columns: 0.86fr 1.14fr;
   gap: 54px;
-  padding: 92px max(24px, calc((100vw - var(--max)) / 2));
+  padding: calc(var(--tile-band-height) + var(--tile-content-gap)) max(24px, calc((100vw - var(--max)) / 2)) 92px;
   background: var(--paper);
 }
 
@@ -1320,9 +1331,10 @@ body.lightbox-open {
 }
 
 .terms-section {
-  padding: 76px max(24px, calc((100vw - var(--max)) / 2));
+  padding: calc(var(--tile-band-height) + var(--tile-content-gap)) max(24px, calc((100vw - var(--max)) / 2)) 76px;
   color: #fff;
   background: #141f1d;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .terms-inner {
@@ -1614,6 +1626,16 @@ body.lightbox-open {
   .contact-section,
   .terms-section {
     padding: 66px 18px;
+  }
+
+  .terms-section {
+    padding-top: calc(var(--tile-band-height) + var(--tile-content-gap));
+  }
+
+  .gallery,
+  .testimonial,
+  .contact-section {
+    padding-top: calc(var(--tile-band-height) + var(--tile-content-gap));
   }
 
   .quote-form {
