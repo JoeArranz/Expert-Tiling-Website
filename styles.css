@@ -1334,7 +1334,6 @@ body.lightbox-open {
   padding: calc(var(--tile-band-height) + var(--tile-content-gap)) max(24px, calc((100vw - var(--max)) / 2)) 76px;
   color: #fff;
   background: #141f1d;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .terms-inner {
