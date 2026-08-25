@@ -11,7 +11,7 @@
     <link rel="preload" href="assets/hero-placeholder.svg" as="image">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body class="home-page">
     <header class="site-header" data-header>
       <div class="header-inner">
         <a class="brand" href="#top" aria-label="Expert Tiling home">
@@ -38,8 +38,9 @@
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#process">Process</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="terms.html">T&amp;Cs</a>
         </nav>
       </div>
     </header>
@@ -62,7 +63,7 @@
             mosaics and commercial spaces throughout Canberra and the ACT.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#contact">Enquire now</a>
+            <a class="button primary" href="contact.html">Enquire now</a>
             <a class="button secondary" href="#portfolio">View gallery</a>
           </div>
         </div>
@@ -712,36 +713,6 @@ Over the years, we've cultivated an unwavering commitment to excellence, infusin
         </form>
       </section>
 
-      <section class="terms-section" id="terms" aria-labelledby="terms-title">
-        <div class="terms-inner">
-          <div>
-            <p class="eyebrow">Terms & conditions</p>
-            <h2 id="terms-title">Draft terms for website enquiries.</h2>
-            <p>
-              These terms are placeholder wording for the website and should be reviewed before launch.
-              Formal project terms can be confirmed with each quote or contract.
-            </p>
-          </div>
-          <div class="terms-grid">
-            <article>
-              <h3>Quotes and scope</h3>
-              <p>Pricing, availability and timeframes are subject to site inspection, confirmed scope, material selection and surface condition.</p>
-            </article>
-            <article>
-              <h3>Client responsibilities</h3>
-              <p>Clients may need to provide clear site access, selected materials, safe working conditions and accurate project information.</p>
-            </article>
-            <article>
-              <h3>Variations</h3>
-              <p>Changes to tile selection, layout, preparation, access or project scope may affect cost and completion timing.</p>
-            </article>
-            <article>
-              <h3>Care and handover</h3>
-              <p>Finished work should be cared for according to product, grout, sealant and maintenance guidance provided after installation.</p>
-            </article>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer" id="site-credentials">
@@ -753,8 +724,8 @@ Over the years, we've cultivated an unwavering commitment to excellence, infusin
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-        <a href="#terms">T&C</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">T&C</a>
       </nav>
       <div class="footer-contact">
         <a href="tel:+61262826802">02 6282 6802</a>
@@ -771,6 +742,7 @@ Over the years, we've cultivated an unwavering commitment to excellence, infusin
       </div>
     </footer>
 
+    <script src="section-router.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
